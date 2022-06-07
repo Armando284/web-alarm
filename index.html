@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="./dist/fonts/font-awesome/css/all.css" />
+    <!-- CSS PERSONALIZADO -->
+    <link rel="stylesheet" href="./dist/css/main.css" />
+  </head>
+  <body class="bg-circle">
+    <div class="d-flex justify-content-center">
+      <div
+        class="bg-white rounded shadow-sm col-xs-8 col-sm-6 col-md-4 col-lg-3 mt-3 p-3"
+      >
+        <form action="" method="post" id="alarm-form">
+          <div>
+            <h1 class="text-center">ALARMA <i class="fas fa-stopwatch"></i></h1>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress-bar-animated"
+              ></div>
+            </div>
+            <hr />
+            <div class="text-center">
+              <span class="my-2 display-4" id="counter">0</span>
+            </div>
+            <label
+              class="text-center font-italic text-secondary w-100"
+              for="tiempo"
+              >Tiempo en minutos :
+            </label>
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="text"
+                name="tiempo"
+                id="tiempo"
+                autofocus
+              />
+              <button class="btn btn-success" type="submit" id="alarm-btn">
+                OK
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="./dist/js/popper.min.js"></script>
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <!-- SCRIPT PERSONALIZADO -->
+    <script src="./dist/js/main.js"></script>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoVIew({
+            behavior: "smoth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
